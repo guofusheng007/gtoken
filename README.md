@@ -35,6 +35,15 @@ TokenID string         `json:"tokenid"`    //TokenID,主要作用是校验前端
 - 第二个, 本token的TTL值(分钟),0表示已失效。
 - 第三个, err
 
+模块安装
+`go get github.com/guofusheng007/gtoken`
+模块引用
+```text
+import (
+	"github.com/guofusheng007/gtoken"
+)
+```
+
 # 示例说明
 
 前端react,用户登录(login)正确后，产生第一个token,存于cookie中。
