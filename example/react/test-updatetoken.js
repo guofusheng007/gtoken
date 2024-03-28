@@ -30,6 +30,12 @@ function UpdateToken() {
         return
     } 
 
+    //当ttl <= 0 时，token已失效，直接跳转到login页面。
+    if (timeDiff <= 0) {
+        console.log(`token已失效,请跳转到login页面重新生成token。`)
+        return
+    } 
+
     //更新token的模块,如下axios是一个整体。
     axios({
         url:'http://192.168.3.110:8080/updatetoken',
@@ -40,7 +46,7 @@ function UpdateToken() {
            'Tokenid': txt_token.tokenid,
         },
     }).then(response => {
-        if(response && response.status == 200){
+        if(response && response.status === 200){
             const token =  response.headers['token'];   
             var ttl = new Date(new Date().getTime() + 24*60*60*1000)
             cookie.save('TOKEN', token,{expires: ttl });      
