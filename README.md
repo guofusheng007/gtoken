@@ -54,6 +54,7 @@ gtoken
 │   └── react
 │       ├── crypto.js              //token解密模块
 │       ├── index.js               //react入口
+│       ├── test-admin.js          //login成功后进入的页面
 │       ├── test-login.js          //login，初始化token
 │       ├── test-update.js         //token重签模块，供每个程序调用。
 │       └── test-read.js           //业务数据，它会调用test-update.js来验证token
