@@ -55,7 +55,8 @@ gtoken
 │       ├── crypto.js              //token解密模块
 │       ├── index.js               //react入口
 │       ├── test-login.js          //login，初始化token
-│       └── test-updatetoken.js    //token重签程序
+│       ├── test-update.js         //token重签模块，供每个程序调用。
+│       └── test-read.js           //业务数据，它会调用test-update.js来验证token
 └── README.md
 ```
 
@@ -96,7 +97,9 @@ gtoken
 
 详细校验逻辑可查看example中的示例代码
 
-<img  src='./test.png' />
+<img  src='./img/test1.png' />
+<img  src='./img/test2.png' />
+<img  src='./img/test3.png' />
 
 
 
