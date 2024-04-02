@@ -21,12 +21,12 @@ Subject string         `json:"subject"`    //Token应用的项目
 TokenID string         `json:"tokenid"`    //TokenID,主要作用是校验前端提交的token是否真实，防止token泄露而带来的安全风险。
 ```
 
-`func CreateToken(gtoken *Gtoken,key []byte) (string)`
+`func CreateToken(gtoken *Gtoken,key []byte) (string)`       
 创建token,其中key是16位或24位或32位的字符切片，返回BASE64字串。
 
-`func CheckToken(encToken string, key []byte) (*Gtoken,int64,error)`
-校验token,主要用来检查前端提供的token是否真实有效。
-返回参数
+`func CheckToken(encToken string, key []byte) (*Gtoken,int64,error)`      
+校验token,主要用来检查前端提供的token是否真实有效。         
+返回参数     
 - 第一个, token本身的数据信息
 - 第二个, 本token的TTL值(分钟),0表示已失效。
 - 第三个, err
