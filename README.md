@@ -98,9 +98,9 @@ gtoken
 
 详细校验逻辑可查看example中的示例代码
 
-<img  src='img/test1.png' />
-<img  src='img/test2.png' />
-<img  src='img/test3.png' />
+<img  src='test/test1.png' />
+<img  src='test/test2.png' />
+<img  src='test/test3.png' />
 
 
 
