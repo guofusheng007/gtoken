@@ -98,7 +98,8 @@ gtoken
 
 详细校验逻辑可查看example中的示例代码
 
-<img  src='./test.png' />
+
+![test3](test/test.png)
 
 
 
