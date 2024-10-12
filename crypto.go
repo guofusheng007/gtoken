@@ -61,7 +61,11 @@ func EncryptCBC(txt string, key []byte,) (string, error) {
 
 //解密
 func DecryptCBC(txt string, key []byte) (string, error) {
-	data,_ := base64.StdEncoding.DecodeString(txt)
+	data,errN := base64.StdEncoding.DecodeString(txt)
+	if errN != nil {
+		err := errors.New("密文格式错误,base64无法解码")
+		return "", err
+	}
 	//data := []byte(txt)
 	//key长度:必须是16,24,32
 	if len:= len(string(key));(len != 16) && (len != 24) && (len != 32) {
@@ -75,6 +79,7 @@ func DecryptCBC(txt string, key []byte) (string, error) {
 	// len(key) = 32,AES-512-GCM
     block, err := aes.NewCipher(key)    // 分组秘钥
     if err != nil {
+		err := errors.New("无法解码")
         return "", err
     }
 
